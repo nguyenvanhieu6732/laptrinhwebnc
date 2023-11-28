@@ -1,4 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "cSpell.language": "vi,en,en-GB"
+    "cSpell.language": "vi,en,en-GB",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
 }

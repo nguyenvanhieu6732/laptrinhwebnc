@@ -8,16 +8,17 @@
     <title>Meniture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Nunito+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Nunito+Sans&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
-    <main>
-        <?php
+    <?php
         include("./admin/header.php");
         ?>
+    <main>
         <!---------------Slideshow--------------->
         <div class="hero slideshow-container">
             <div class="mySlides fade">
@@ -38,7 +39,8 @@
             <div class="content">
                 <div class="title">FALL WINTER 2019</div>
                 <div class="colection">
-                    <img src="https://pos.nvncdn.net/f0fdc3-116319/bn/20220326_bVpeIndOqoGbFV6tyGZ60tLH.png" alt="FALL WINTER 2019" class="colection-img" />
+                    <img src="https://pos.nvncdn.net/f0fdc3-116319/bn/20220326_bVpeIndOqoGbFV6tyGZ60tLH.png"
+                        alt="FALL WINTER 2019" class="colection-img" />
                 </div>
             </div>
         </div>
@@ -56,8 +58,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_vlJYYmFFXeI7FtOOMBSeMRsy.jpg" alt="" class="first-img" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_2gTRfBT2GxP9ABo9cXShyukd.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_vlJYYmFFXeI7FtOOMBSeMRsy.jpg"
+                                    alt="" class="first-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_2gTRfBT2GxP9ABo9cXShyukd.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">290,000 đ</span>
@@ -69,8 +73,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_6ljbV2X4Js0l6PpzvbVxgQmn.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_v0tWdek9bhDh13UbA3KAKeAq.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_6ljbV2X4Js0l6PpzvbVxgQmn.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_v0tWdek9bhDh13UbA3KAKeAq.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">350,000 đ</span>
@@ -82,8 +88,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_2q91j0kJI3mkrZCaW4rjrW77.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_qmA6Z0R3kjpI0tP73j32yKzX.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_2q91j0kJI3mkrZCaW4rjrW77.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_qmA6Z0R3kjpI0tP73j32yKzX.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">330,000 đ</span>
@@ -95,8 +103,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_NXam3csGGkGXKangeGuZDtMq.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_4ICAbnTLNxcug28hp8tJ7mNq.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_NXam3csGGkGXKangeGuZDtMq.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_4ICAbnTLNxcug28hp8tJ7mNq.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">350,000 đ</span>
@@ -108,8 +118,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_WwYgq75wslyrKbLGeNZHOzJx.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_zRgKbjNOt3rfQfOl8PIOnuSz.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_WwYgq75wslyrKbLGeNZHOzJx.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_zRgKbjNOt3rfQfOl8PIOnuSz.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">399,000 đ</span>
@@ -121,8 +133,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_ED9VYUBIDKuSRVpc0JKr0IrX.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_aAmbOb1K0pV8gDctqzeigh3D.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_ED9VYUBIDKuSRVpc0JKr0IrX.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_aAmbOb1K0pV8gDctqzeigh3D.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">399,000 đ</span>
@@ -134,8 +148,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_MsAF2Zt8a1OhxsQIvwAJFreD.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_hOfyw2ZRl47pcvxqdfMWDbLj.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_MsAF2Zt8a1OhxsQIvwAJFreD.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_hOfyw2ZRl47pcvxqdfMWDbLj.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">399,000 đ</span>
@@ -147,8 +163,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_JTKW2vsnl6BBY27qTUnEom8e.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_d6QWK0rakDR2k9bYfCC5h6TW.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_JTKW2vsnl6BBY27qTUnEom8e.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220318_d6QWK0rakDR2k9bYfCC5h6TW.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">399,000 đ</span>
@@ -180,8 +198,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_J0OSzciIRCSTJQXaQAYMBTAT.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_WRFoXddpHACjVJulvWlARJzV.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_J0OSzciIRCSTJQXaQAYMBTAT.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_WRFoXddpHACjVJulvWlARJzV.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">520,000 đ</span>
@@ -193,7 +213,8 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_gBcPLTKTuVuJDbZzbwFirGdZ.jpg" alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_gBcPLTKTuVuJDbZzbwFirGdZ.jpg"
+                                    alt="" />
                                 <img src="" alt="" class="second-img" />
                             </a>
                         </div>
@@ -208,8 +229,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_Rbix6VgRvB66H0ZU2ach8Zvd.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_FlbkX1FOncXx7UxrStyN7BPK.jpg" alt="" class="second-img" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_Rbix6VgRvB66H0ZU2ach8Zvd.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_FlbkX1FOncXx7UxrStyN7BPK.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">500,000 đ</span>
@@ -221,8 +244,10 @@
                     <div class="product-item">
                         <div class="product-img">
                             <a href="#!">
-                                <img src="	https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_Vmh6LV2p3MYl8xQzS2KDxHYE.jpg" alt="" />
-                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_SvcPFHnpmOZO1C0xvZeGHUgp.jpg" alt="" class="second-img" />
+                                <img src="	https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_Vmh6LV2p3MYl8xQzS2KDxHYE.jpg"
+                                    alt="" />
+                                <img src="https://pos.nvncdn.net/f0fdc3-116319/ps/20220321_SvcPFHnpmOZO1C0xvZeGHUgp.jpg"
+                                    alt="" class="second-img" />
                             </a>
                         </div>
                         <span class="product-price">480,000 đ</span>
