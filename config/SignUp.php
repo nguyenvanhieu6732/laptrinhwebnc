@@ -1,11 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $connect = mysqli_connect('localhost', 'root', '', 'login');
+    $connect = mysqli_connect('localhost', 'root', '', 'meniture');
 
+    $fullname = $_POST['fullName'];
     $email = $_POST['email'];
     $password = $_POST['passWord'];
+    $phone =$_POST['phoneNumber'];
 
-    $sqlexam  = "SELECT * FROM users WHERE username='$email'";
+    $sqlexam  = "SELECT * FROM users WHERE Email='$email'";
     $resultexam = mysqli_query($connect, $sqlexam);
 
     // Kiểm tra kết quả
@@ -23,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           </script>";
     } else {
 
-        $sql = "INSERT INTO users ( username, password) VALUES ( '$email', '$password')";
+        $sql = "INSERT INTO users (FullName, Email, password,Phone) VALUES ( '$fullname','$email', '$password','$phone')";
         $result = mysqli_query($connect, $sql);
 
         // Kiểm tra kết quả

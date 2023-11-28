@@ -86,13 +86,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="cart">
+                <a class="cart" href="./giohang.php">
                     <button id="showButton">
                         <i class="fa-solid fa-bag-shopping fa-2x cart-img"></i>
                     </button>
-
-
-                </div>
+                </a>
             </div>
         </div>
         <!------ Navigation ------->
@@ -145,94 +143,5 @@
         </nav>
     </div>
 </header>
-<div class="slide-in-element">
-    <div class="container mt-5">
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                // Kết nối đến cơ sở dữ liệu
-                $servername = "Localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Login";
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Kiểm tra kết nối
-                if ($conn->connect_error) {
-                    die("Kết nối không thành công: " . $conn->connect_error);
-                }
-
-                // Lấy dữ liệu từ cơ sở dữ liệu
-                $sql = "SELECT id, UserName, PassWord FROM users";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // Xuất dữ liệu từ mỗi hàng
-                    $stt = 1;
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<th scope='row'>" . $stt . "</th>";
-                        echo "<td>" . $row["UserName"] . "</td>";
-                        echo "<td>" . $row["PassWord"] . "</td>";
-                        echo "</tr>";
-                        $stt++;
-                    }
-                } else {
-                    echo "<tr><td colspan='3'>Không có dữ liệu</td></tr>";
-                }
-
-                // Đóng kết nối
-                $conn->close();
-                ?>
-            </tbody>
-        </table>
-    </div>
-</div>
-<style>
-    #showButton {
-        background-color: #fff;
-        border: 0;
-    }
-
-    body {
-        /* overflow: hidden; */
-        z-index: 1;
-    }
-
-    .slide-in-element {
-        position: fixed;
-        top: 10%;
-        left: 100%;
-        z-index: 1;
-        background-color: #fff;
-        color: #000;
-        width: 50%;
-        height: 90%;
-        border-radius: 4px;
-        transition: left 0.5s ease;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var showButton = document.getElementById("showButton");
-        var slideInElement = document.querySelector(".slide-in-element");
-
-        showButton.addEventListener("click", function() {
-            if (slideInElement.style.left === "50%") {
-                slideInElement.style.left = "100%";
-            } else {
-                slideInElement.style.left = "50%";
-            }
-        });
-    });
-</script>

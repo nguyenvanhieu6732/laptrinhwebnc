@@ -3,8 +3,8 @@
 if ($_POST) {
     $username = $_POST['Email'];
     $password = $_POST['Pass'];
-    $connect = mysqli_connect('localhost', 'root', '', 'login');
-    $sql = "select * from users where UserName = '$username'";
+    $connect = mysqli_connect('localhost', 'root', '', 'meniture');
+    $sql = "select * from Users where Email = '$username'";
     $result = $connect->query($sql)->fetch_assoc();
     if ($result['PassWord'] == $password) {
         echo "<script>
@@ -14,6 +14,7 @@ if ($_POST) {
             showConfirmButton: false,
             timer: 900
           })    
+          
           setTimeout(function(){ 
             window.location.href = 'index.php'; 
             }, 800);
