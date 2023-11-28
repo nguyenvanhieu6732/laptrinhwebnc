@@ -4,53 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide In From Right</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Danh sách Sản Phẩm</title>
 </head>
 
 <body>
-    <button id="showButton">Hiển thị</button>
-    <div class="slide-in-element">Nội dung của bạn ở đây</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            /* Ngăn chặn tràn nội dung */
-        }
+    <div class="container mt-5 ">
+        <h2>Danh sách Sản Phẩm</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Tên Sản Phẩm</th>
+                    <th scope="col">Số Lượng</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Đơn Giá</th>
+                    <th scope="col">Thành Tiền</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Kết nối đến cơ sở dữ liệu
+                $servername = "Localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "meniture";
 
-        .slide-in-element {
-            position: absolute;
-            top: 10%;
-            left:100%;
-            /* Bắt đầu ở phải ngoài màn hình */
-            /* transform: translate(-50%, -50%);     */
-            z-index: 1;
-            background-color: #3498db;
-            color: #fff;
-            width: 50%;
-            height: 90%;
-            border-radius: 4px;
-            transition: left 0.5s ease;
-            /* Hiệu ứng chuyển động trong 0.5 giây với hàm chuyển động là 'ease' */
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var showButton = document.getElementById("showButton");
-            var slideInElement = document.querySelector(".slide-in-element");
+                $conn = new mysqli($servername, $username, $password, $dbname);
 
-            showButton.addEventListener("click", function() {
-                if (slideInElement.style.left === "50%") {
-                    slideInElement.style.left = "100%";
-                } else {
-                    slideInElement.style.left = "50%";
+                // Kiểm tra kết nối
+                if ($conn->connect_error) {
+                    die("Kết nối không thành công: " . $conn->connect_error);
                 }
-            });
-        });
+                // Lấy dữ liệu từ cơ sở dữ liệu
+                $sql = "SELECT product.Url_Product, 
+                product.NameProduct,
+                cart.Quantity,
+                cart.SizeProduct,
+                product.PriceProduct
+                FROM cart, product
+                WHERE cart.IdProduct = product.IdProduct;
+                ";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Biến đếm số thứ tự
+                    $count = 1;
+
+                    // Xuất dữ liệu từ mỗi hàng
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<th scope='row'>" . $count . "</th>";
+                        echo "<td><img src='" . $row["Url_Product"] . "' alt='Ảnh Sản Phẩm' style='max-width: 100px; border-radius: 16px; border:1px solid #ccc'></td>";
+                        echo "<td>" . $row["NameProduct"] . "</td>";
+                        echo "<td><input type='number' class='form-control' id='quantity' value='1' min='1' onchange='updatePrice()' style ='width:60px'></td>";
+                        echo "<td><input type='number' class='form-control' value='35' min='35' max='45'  style ='width:60px'></td>";
+                        echo "<td><input type='text' class='form-control' id='price' style ='width:100px' readonly></td>";
+
+                        echo "<td>
+                            <button class='btn btn-danger' 
+                                onclick='deleteProduct(" . $row["NameProduct"] . ")'>
+                                Xóa
+                            </button>     
+                        </td>";
+                        echo "</tr>";
+                        $count++;
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Không có dữ liệu</td></tr>";
+                }
+
+                // Đóng kết nối
+                $conn->close();
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <script>
+  function updatePrice() {
+    // Lấy giá trị từ ô input quantity
+    var quantity = document.getElementById("quantity").value;
+
+    // Giả sử giá sản phẩm là 10 đồng, bạn có thể thay đổi giá trị này tùy thuộc vào yêu cầu của bạn
+    var pricePerUnit = 10;
+
+    // Tính toán giá tổng dựa trên số lượng và giá per unit
+    var totalPrice = quantity * pricePerUnit;
+
+    // Cập nhật giá vào ô input price
+    document.getElementById("price").value = totalPrice.toFixed(2); // Giữ hai chữ số thập phân
+  }
     </script>
 </body>
 
